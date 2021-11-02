@@ -10,15 +10,15 @@ public class ParteA {
         //Declaramos las variables que usaremos
         int numDedosJugadorA;
         int numDedosJugadorB;
-        int apuesta;
+        int selection;
         //Creamos el bucle que nos permitirá repetir el programa hasta que queramos
         do{
         //Preguntamos por qué se quiere apostar o si se quiere abandonar el programa
         String apuestaText = JOptionPane.showInputDialog(null, "¿Apuestas por Pares o por Nones?"+
                 "\n"+"1 para nones"+"\n"+"2 para pares"+"\n"+"0 para salir");
-        apuesta = Integer.parseInt(apuestaText);
+        selection = Integer.parseInt(apuestaText);
         //Switch para seleccionar cada caso
-        switch (apuesta){
+        switch (selection){
             case 1:
                 //JOption
             break;
@@ -38,7 +38,7 @@ public class ParteA {
                 
         }
         //Condición de repetición
-        }while(!(apuesta==1 || apuesta==2 || apuesta==0));
+        }while(!(selection==0));
         
     }
 
