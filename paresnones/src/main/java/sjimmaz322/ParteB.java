@@ -5,17 +5,17 @@ import javax.swing.JOptionPane;
 
 public class ParteB {
 
-    public static void main(String[] args) {
-        //Declarada la variable para generar números aleatorio
-        Random numAleatorio = new Random();
-        //Declarada e inicializada la variable que generará un número aleatorio entre 0 y 10
-        int numDedosMaquina = numAleatorio.nextInt(11);
+    public static void main(String[] args) {  
         //Declaradas las variables que vamos a usar
         int numDedos;
         int selection;
         int suma;
 
        do {
+           //Declarada la variable para generar números aleatorio
+        Random numAleatorio = new Random();
+        //Declarada e inicializada la variable que generará un número aleatorio entre 0 y 10
+        int numDedosMaquina = numAleatorio.nextInt(11);
             //Preguntamos por qué se quiere apostar o si se quiere abandonar el programa
             String apuestaText = JOptionPane.showInputDialog(null, "¿Apuestas por Pares o por Nones?"
                     + "\n" + "1 para nones" + "\n" + "2 para pares" + "\n" + "0 para salir");
