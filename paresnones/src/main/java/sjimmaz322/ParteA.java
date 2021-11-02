@@ -52,7 +52,7 @@ public class ParteA {
                     }
 
                     break;
-
+                //Caso de apostar por pares
                 case 2:
                     do {
                         String dedosAText = JOptionPane.showInputDialog("Jugador A" + "\n" + "¿Cuántos dedos quieres usar?");
