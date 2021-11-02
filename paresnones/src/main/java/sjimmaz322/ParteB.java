@@ -36,6 +36,7 @@ public class ParteB {
                     //Suma para si el numero resultante es par o impar
                     suma = numDedos + numDedosMaquina;
                     //Condición para saber que mensaje mostrar dependiento del resto de la división de la suma por 2
+                    
                     //En caso de que sea par
                     if (suma % 2 == 0) {
                         JOptionPane.showMessageDialog(null, "Apostaste por nones, ha salido pares, gana la máquina"
@@ -51,6 +52,7 @@ public class ParteB {
                     break;
 
                 case 2:
+                    //Caso de apostar por pares
                     do {
                         String dedosAText = JOptionPane.showInputDialog("Jugador" + "\n" + "¿Cuántos dedos quieres usar?");
                         numDedos = Integer.parseInt(dedosAText);
