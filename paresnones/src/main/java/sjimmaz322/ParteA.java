@@ -18,8 +18,8 @@ public class ParteA {
                 + "Introduzca 1 para si" + "\n"
                 + "Introduzca 0 para no");
         int option = Integer.parseInt(selection);
-        
-        if (option==1){
+        switch (option){
+            case 1:
         numDedosText = JOptionPane.showInputDialog(null, "¿Cuántos dedos quieres sacar?");
         numDedos = Integer.parseInt(numDedosText);
         suma =numDedosMaquina + numDedos;
@@ -32,8 +32,15 @@ public class ParteA {
             JOptionPane.showMessageDialog(null, "Ha salido nones" + "\n" + "Tú sacaste: " + numDedos + "\n"
                     + "La máquina sacó: " + numDedosMaquina);
         }
-        } else if (option==0){
+            break;
+        
+            case 0:
             JOptionPane.showMessageDialog(null, "Otra vez será");
+            break;
+            
+            default:
+            JOptionPane.showMessageDialog(null, "Las opciones válidas son 0 o 1");
+            break;
         }
 
     }
