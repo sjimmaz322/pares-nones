@@ -1,20 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package sjimmaz322;
 
-/**
- *
- * @author samjimmaz
- */
+import javax.swing.JOptionPane;
+
+
+
 public class ParteA {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        int numDedosJugadorA;
+        int numDedosJugadorB;
+        
+        
+        String apuestaText = JOptionPane.showInputDialog(null, "¿Apuestas por Pares o por Nones?"+
+                "\n"+"1 para nones"+"\n"+"2 para pares");
+        int apuesta = Integer.parseInt(apuestaText);
+        
+        switch (apuesta){
+            case 1:
+                
+        }
+        
     }
-    
+
 }
