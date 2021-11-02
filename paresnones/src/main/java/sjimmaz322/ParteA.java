@@ -19,10 +19,12 @@ public class ParteA {
         int suma = numDedosMaquina + numDedos;
         
         if (suma%2 == 0){
-            JOptionPane.showMessageDialog(null, "Ha salido pares");
+            JOptionPane.showMessageDialog(null, "Ha salido pares"+"\n"+"Tú sacaste: " + numDedos +"\n"+
+                    "La máquina sacó: " + numDedosMaquina);
             
         } else {
-            JOptionPane.showMessageDialog(null, "Ha salido nones");
+            JOptionPane.showMessageDialog(null, "Ha salido nones"+"\n"+"Tú sacaste: " + numDedos +"\n"+
+                    "La máquina sacó: " + numDedosMaquina);
         }
     }
     
