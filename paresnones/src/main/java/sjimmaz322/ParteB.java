@@ -3,7 +3,7 @@ package sjimmaz322;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
-public class ParteA {
+public class ParteB {
 
     public static void main(String[] args) {
 
