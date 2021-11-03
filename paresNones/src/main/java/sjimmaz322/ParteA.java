@@ -18,8 +18,10 @@ public class ParteA {
             selection = Integer.parseInt(apuestaText);
             //Switch para seleccionar cada caso
             switch (selection) {
+                
                 //Caso de apostar por nones
                 case 1:
+                    
                     //Bucle para solo permitir valores entre 0 y 10, o sea, los dedos que se pueden usar
                     do {
                         String dedosAText = JOptionPane.showInputDialog("Jugador A" + "\n" + "¿Cuántos dedos quieres usar?");
@@ -52,6 +54,7 @@ public class ParteA {
                     }
 
                     break;
+                    
                 //Caso de apostar por pares
                 case 2:
                     do {
@@ -61,6 +64,7 @@ public class ParteA {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 0 y 10 dedos");
                         }
                     } while ((numDedosA < 0 || numDedosA > 10));
+                    
                     //Mismo bucle empleado para el jugador A
                     do {
                         String dedosBText = JOptionPane.showInputDialog("Jugador B" + "\n" + "¿Cuántos dedos quieres usar?");
@@ -69,14 +73,17 @@ public class ParteA {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 0 y 10 dedos");
                         }
                     } while ((numDedosB < 0 || numDedosB > 10));
+                    
                     //Suma para si el numero resultante es par o impar
                     suma = numDedosA + numDedosB;
+                    
                     //Condición para saber que mensaje mostrar dependiento del resto de la división de la suma por 2
                     //En caso de que sea par
                     if (suma % 2 == 0) {
                         JOptionPane.showMessageDialog(null, "Apostaste por pares, ha salido pares, gana el jugador A"
                                 + "\n" + "El jugador A sacó " + numDedosA + " dedos, y el jugador B sacó " + numDedosB + " dedos" + "\n"
                                 + "La suma da " + suma + " que es par");
+                        
                     //En caso de que sea impar
                     } else if (!(suma % 2 == 0)) {
                         JOptionPane.showMessageDialog(null,"Apostaste por nones, ha salido nones, gana el jugador B"
@@ -84,10 +91,12 @@ public class ParteA {
                                 + "La suma da " + suma + " que es impar o sea nones");
                     }
                     break;
+                    
                 //Caso para la decisión de abandonar el programa
                 case 0:
                     JOptionPane.showMessageDialog(null, "Entonces no jugamos" + "\n" + "Adios");
                     break;
+                    
                 //Caso para cualquier valor no permitido
                 default:
                     JOptionPane.showMessageDialog(null, "Los valores aceptables son 1, 2 o 0");
@@ -97,7 +106,5 @@ public class ParteA {
 
             //Condición de repetición
         } while (!(selection == 0));
-
     }
-
 }
