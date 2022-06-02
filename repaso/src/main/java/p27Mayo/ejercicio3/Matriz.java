@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import p27Mayo.ejercicio2.Datos;
 
 public class Matriz {
 
@@ -13,9 +12,15 @@ public class Matriz {
 
         String[][] matriz = lectura("matriz.txt");
 
-        imprimirMatrizStr(matriz);
+        ArrayList<String> listaIslas = new ArrayList<>();
 
-        buscarIslas(matriz);
+        imprimirMatriz(matriz);
+
+        listaIslas = buscarIslas(matriz, listaIslas);
+
+        for (String listaIsla : listaIslas) {
+            System.out.println(listaIsla);
+        }
 
     }
 
@@ -50,12 +55,12 @@ public class Matriz {
 
     }
 
-    public static void imprimirMatrizStr(String[][] matriz) {
+    public static void imprimirMatriz(String[][] matriz) {
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
 
-                System.out.print(matriz[i][j] + "\t");
+                System.out.print(matriz[i][j] + " ");
             }
 
             System.out.println("");
@@ -63,22 +68,21 @@ public class Matriz {
         System.out.println("");
     }
 
-    public static void buscarIslas(String[][] matriz) {
-
+    public static ArrayList<String> buscarIslas(String[][] matriz, ArrayList<String> lista) {
+        ArrayList<String> listado = lista;
         for (int i = 0; i < matriz.length; i++) { //Recorre la matriz
             for (int j = 0; j < matriz[i].length; j++) {
 
                 if (matriz[i][j].equalsIgnoreCase("x")) { //Si es tierra, comprueba
 
                     if (esIsla(i, j, matriz)) { //Si es isla
-
-                        System.out.println(i + ", " + j);
-
+                        lista.add(i + "," + j);
                     }
 
                 }
             }
         }
+        return listado;
     }
 
     public static boolean esIsla(int i, int j, String[][] matriz) {
