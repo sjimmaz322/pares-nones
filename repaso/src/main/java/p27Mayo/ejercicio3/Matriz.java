@@ -20,9 +20,9 @@ public class Matriz {
     }
 
     public static String[][] lectura(String ruta) {
-        List<Datos> lista = new ArrayList<>();
 
-        // Variables para guardar los datos que se van leyendo
+        List<String> lista = new ArrayList<>();
+
         String linea;
         String[] tokens;
         String[][] matriz = new String[5][5];
@@ -33,15 +33,15 @@ public class Matriz {
             // Mientras haya líneas por leer
             while (datosFichero.hasNextLine()) {
 
-                //Lee linea sustituyendo las comas por puntos para los double
                 linea = datosFichero.nextLine();
 
-                tokens = linea.split(" "); //Crea el tokens
+                tokens = linea.split(" ");
 
-                matriz[i] = tokens; //Añade la linea a la matriz
+                matriz[i] = tokens;
 
                 i++;
             }
+
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
